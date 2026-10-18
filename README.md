@@ -1,0 +1,1 @@
+"Lógica e código deste mod desenvolvidos com a assistência do Claude AI."
