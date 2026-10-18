@@ -1,0 +1,2 @@
+Personajes nuevos (generado por roster_build.py)
+Goku UI: id 49, donante 0 (GOKOU), modelos [3990], bocas [3991], retratos [3992, 3993], altura 17.7 -> escala 1.07

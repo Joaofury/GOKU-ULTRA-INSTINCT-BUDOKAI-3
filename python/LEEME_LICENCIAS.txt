@@ -1,0 +1,6 @@
+Python 3.14.3 (python.org, licencia PSF: LICENSE.txt) con Tcl/Tk (tcl/, licencia BSD),
+numpy y scipy (BSD) y Pillow (MIT-CMU). Sus licencias estan en Lib/site-packages/*.dist-info:
+  numpy-2.5.1.dist-info
+  pillow-11.3.0.dist-info
+  scipy-1.18.1.dist-info
+Se incluye para que el launcher y el Mod Kit funcionen sin instalar nada.

@@ -1,0 +1,565 @@
+BUDOKAI JAPANESE/GREATEST HITS/COLLECTOR EDITION CHARACTERS BINS characters position
+
+70 C-16
+71 C-16 alt
+
+75 C-17
+76 C-17 alt 
+
+80 C18
+81 C18 alt 
+82 C18 alt2
+
+86 li shenron
+87 li shenron black 
+
+91 gero
+92 gero alt
+
+96 babidy
+
+99 bardack
+100 bardack alt 
+
+104 buu gohan
+105 buu gohan alt 
+107 buu gotenks
+108 buu gotenks alt 
+
+110 bulma
+
+114 fantasmi kamikaze buu
+
+116 buu piccolo
+117 buu piccolo alt 
+
+119 broly
+120 broly lss
+121 broly alt 
+122 broly lss alt 
+
+128 fat buu
+129 fat buu
+
+133 super bu
+134 super bu alt 
+
+141 kid buu
+142 kid buu alt 
+
+146 cell 1
+147 cell 2
+148 cell 3
+149 cell 1 alt
+150 cell 2 alt
+151 cell 3 alt
+
+
+160 cell jr
+161 cell jr alt
+
+166 cooler
+167 cooler final form
+168 metal cooler
+169 cooler alt
+170 cooler final form alt
+171 metal cooler alt 
+
+
+176 darbula
+177 darbula alt 
+
+181 freeza 1
+182 freeza 2
+183 freeza 3
+184 freezer 4
+185 freezer 4 100%
+186 freezabot
+187 freeza 1 alt 
+188 freeza 2 alt 
+189 freeza 3 alt 
+190 freezer 4 alt 
+191 freezer 4 100% alt 
+192 freezabot alt
+
+193 freezer 1 con mini navicella
+
+214 gogeta grasso
+215 gogeta grasso alt
+
+217 gogeta ss
+218 gogeta ss4
+219 gogeta ss alt
+220 gogeta ss4 alt
+
+225 gohan adulto (violet suite)
+226 gohan adulto ss
+227 gohan mystic 
+228 gohan adulto (orange suite)
+229 gohan adulto ss
+230 gohan mystic 
+
+
+235 gohan cell saga
+236 gohan cell saga ss
+238 gohan cell saga saiyan armour 
+239 gohan cell saga saiyan armour ss 
+240 gohan cell saga saiyan armour ss2 
+
+
+246 gohan bambino
+247 gohan namek sayan armour
+248 gohan namek
+
+252 goku bambino
+253 goku bambino alt
+
+257 scouter
+
+258 ginyu
+259 ginyu alt
+
+264 goku norm 
+265 goku kaiohken 
+266 goku ss 
+267 goku ss2 
+268 goku ss3 
+269 goku ss4 
+
+270 goku norm alt 
+271 goku kaiohken alt 
+272 goku alt ss 
+273 goku alt ss2 
+274 goku alt ss3 
+275 goku alt ss4 
+
+276 goku vestito rotto 
+277 goku vestito rotto norm + kaioken 
+278 goku vestito rotto ss 
+279 goku vestito rotto ss2 
+280 goku vestito rotto ss3 
+281 goku + ginyu (?)
+
+282 angelic goku 
+283 angelic goku kaioken 
+284 angelic goku ss 
+285 angelic goku ss2 
+286 angelic goku ss3 
+287 angelic goku ss4 
+
+293 great saiyaman
+294 great saiyaman alt
+
+
+298 goten
+299 goten ss
+300 goten alt 
+301 goten alt ss 
+
+
+305 gotenks normale
+306 gotenks ss
+307 gotenks ss3
+308 gotenks normale alt
+309 gotenks ss alt
+310 gotenks ss3 alt
+
+312 ghost gotenks
+313 ghost gotenks ss3
+
+314 fat gotenks
+315 fat gotenks alt
+
+325 kibith
+
+327 krillin senza capelli, krillin capelli, krillin armour
+328 krillin capelli
+329 krillin armour 
+
+
+334 kaiohkibith
+335 kaiohkibith alt
+
+339 kaiohshin
+340 kaiohshin alt
+
+344 scouter blu
+
+345 nappa 
+346 nappa alt 
+
+350 piccolo
+351 nail 
+352 piccolo long cape
+353 Piccolo Daimao
+
+359 green scouter
+360 raditz 
+361 raditz alt 
+
+358 reecome
+359 reecome alt
+
+363 saibaman
+364 saibaman alt
+
+376 capelli mr satan
+377 mr satan
+378 mr satan alt
+
+383 trunks bambino
+384 trunks bambino ss
+385 trunks bambino alt, trunks bambino alt ss
+386 trunks bambino alt ss
+
+390 future trunks sword
+391 future trunks sword ss
+392 future trunks sword alt
+393 future trunks sword ss alt
+394 Future Trunks Armour 
+395 Future Trunks Armour SS 
+
+400 tenshinhan 
+401 tenshinhan alt
+
+405 uub
+406 uub alt
+
+410 videl 
+411 videl alt
+
+416 vegeta no armour normal & ss
+417 vegeta no armour ss
+418 vegeta ss4
+419 majin vegeta
+
+420 vegeta androids saga armour & ss 
+421 vegeta androids saga armour ss 
+422 vegeta ss4 alt 
+423 majin vegeta androids armour 
+
+424 vegeta sayan saga armour 
+425 vegeta sayan saga armour ss 
+426 majin vegeta sayan saga armour 
+
+427 vegeta namek armour 
+428 vegeta namek armour ss 
+429 majin vegeta namek armour 
+
+438 vegetto
+439 vegetto ss
+440 vegetto alt
+441 vegetto alt ss
+
+445 yamcha capelli corti 
+446 yamcha vestiti gialli 
+447 yamcha capelli lunghi 
+
+
+
+
+
+BUDOKAI JAPANESE/GREATEST HITS/COLLECTOR EDITION AURA BINS the charachter aura files
+
+C-16 unnamed_0
+
+C-17 unnamed_1
+
+C-18 unnamed_2
+
+li shenron unnamed_3
+
+gero unnamed_4
+
+bardack unnamed_5
+
+broly unnamed_6
+
+fat buu unnamed_7
+
+super bu unnamed_8
+
+kid buu unnamed_9
+
+cell unnamed_10
+
+cell jr unnamed_11
+
+aura loading unnamed_12
+
+cooler unnamed_13
+
+darbula unnamed_14
+
+freeza unnamed_15
+
+gogeta ss unnamed_16
+
+gogeta ss4 unnamed_17
+
+gohan adulto unnamed_18
+
+gohan cell saga unnamed_19
+
+gohan bambino unnamed_20
+
+goku bambino unnamed_21
+
+ginyu unnamed_22
+
+goku unnamed_23
+
+great saiyaman unnamed_25
+
+goten unnamed_26
+
+gotenks unnamed_27
+
+krillin unnamed_28
+
+kaiohshin unnamed_29
+
+nappa unnamed_30
+
+piccolo unnamed_31
+
+raditz unnamed_32
+
+Reecom unnamed_33
+
+saibaman unnamed_34
+
+mr satan unnamed_35
+
+trunks bambino unnamed_36
+
+future trunks unnamed_37
+
+tenshinhan unnamed_38
+
+uub unnamed_39
+
+videl unnamed_40
+
+vegeta unnamed_41
+
+vegetto unnamed_42
+
+yamcha unnamed_43
+
+
+
+
+BUDOKAI JAPANESE/GREATEST HITS/COLLECTOR EDITION ANIMATIONS BINS bins containing the animations (walk, fist, kick, etc.)
+
+
+C16
+72/73/74
+
+C17
+77/78/79
+
+C18
+83/84/85
+
+LI SHENRON
+88/89/90
+
+GERO
+93/94/95
+
+??
+97
+
+BARDAK
+101/102/103
+
+BUU-GOHAN?
+106
+
+BUU-GOTENKS?
+109
+
+??
+111/112/113
+
+BUU KAMIKAZE GHOST?
+115
+
+BUU PICCOLO?
+118
+
+BROLY
+123/124/125/126/127
+
+FAT BUU
+130/131/132
+
+SUPER BUU
+135/136/137/138/139/140
+
+KID BUU
+143/144/145
+
+CELL
+152/153/154/155/156/157/158/159
+
+CELL JR.
+162/163/164/165
+
+COOLER
+172/173/174/175
+
+DARBULA
+178/179/180
+
+FREEZA
+194/195/196/197/198/199/200/201/202/203/204/205/206/207/208/209/210/211/212/213
+
+FAT GOGETA
+216
+
+GOGETA
+221/222/223/224
+
+GOHAN ADULT
+231/232/233/234
+
+GOHAN TEEN
+241/242/243/244/245
+
+GOHAN CHILD
+249/250/251
+
+GOKU CHILD
+254/255/256
+
+GINYU
+260/261/262
+
+GOKU
+282/283/284/285/286
+
+GREAT SAYAMAN
+289/290/291
+
+GOTEN
+296/297/298
+
+GOTENKS
+305(??)
+310/311/312/313/314/315/316/317/318
+
+KIBITH??
+320
+
+KRILIN
+324/325/326/327
+
+KAIOKIBITH
+330/331/332
+
+KAIOSHIN
+335/336/337
+
+NAPPA
+341/342/343
+
+PICCOLO
+347/348/349/350
+
+RADDITZ
+354/355/356
+
+REECOME
+360/361/362
+
+SAIBAMAN
+365/366/367
+
+MR. SATAN
+371/372/372/373/374
+
+TRUNKS CHILD
+379/380/381
+
+TRUNKS
+386/387/388/389
+
+TENSHINHAN
+392/393/394
+
+UUB
+397/398/399
+
+VIDEL
+402/403/404
+
+VEGETA
+420/421/422/423/424/425/426/427
+
+VEGETH
+432/433/434
+
+YAMCHA
+438/439/440
+
+??
+441
+
+
+BUDOKAI JAPANESE/GREATEST HITS/COLLECTOR EDITION EFFECTS BINS bin containing the effects (kamehameha, final shine, etc. shapes and colors)
+
+
+504 Fighting effects visibile
+505 Android 16
+506 Android 17 visibile
+507 Android 18
+508 Skill?
+509 Android 20 (Dr. Gero)
+510 Bardock
+511 BGH (???)
+512 Bulma? Broly?
+513 Goku?
+514 Broly
+515 Buu (?)
+516 Majin Buu
+517 Buu (?)
+518 Cell
+519 Cell Jr
+520 ?? visibile
+521 Cooler
+522 Cooler Spaceship visibile
+523 Dabura
+524 Freeza
+525 Cooler Spaceship visibile
+526 Gogeta (SS4)
+527 Gogeta (SS)
+528 Gohan
+529 Gohan
+530 Gohan kid visibile
+531 Goku (kid)
+532 Ginyu
+533 Goku
+534 Golden Dragon (Dragonfist) visibile
+535 Great Saiyaman
+536 Goten visibile
+537 Gotenks
+538 Ghost (??) visibile
+539 Crilin
+540 Kos (??)
+541 kos
+542 Nappa
+543 Piccolo
+544 Raditz
+545 Recoome
+546 Saibaman
+547 Mr Satan (Hercule)
+548 Trunks (Kid) visibile
+549 Trunks (Future)
+550 Tenshinhan (Tien)
+551 Uub
+552 Videl
+553 Vegeta
+554 Vegetto
+555 Yamcha visibile

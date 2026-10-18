@@ -1,0 +1,23 @@
+[personaje]
+nombre = "Goku UI"
+id = 49
+donante = 0
+modelos = ["modelos/traje1.bin"]
+formas = 1
+moveset = ["moveset/anm.bin"]
+camara = "moveset/camara.bin"
+# efeitos visuais da ult do Heroes (B3Heroes/tools/vfx_ult.py): pacote proprio = o do Goku + os do Heroes
+tecnicas = "moveset/tecnicas.bin"
+capsulas_nativas = [6, 9]
+# Aura: entrada propria (aura_color) com a aura da ult do Instinto Superior do Heroes, gravada por
+# B3Heroes/tools/aura_heroes.py depois de cada montagem do roster. O jogo so desenha a aura se o registro
+# de aura do personagem (guest 0x82321A38 + 5*(ID*8 + forma)) tiver tipo 2-7; nos IDs novos ele vem zerado
+# e o port nao tem chave para preencher (teste: escrito ao vivo na memoria do jogo).
+aura_color = "#80B3FF"
+
+# Ult do Heroes (Strike of Fury, BWGOK_SELFISH_GOKUI) sobre a cinematica da Genki Dama do Goku:
+# capsula nova que toma o lugar da 10 (Genki Dama) so neste personagem.
+[[capsula]]
+nombre = "Strike of Fury"
+tipo = "definitiva"
+reemplaza = 10

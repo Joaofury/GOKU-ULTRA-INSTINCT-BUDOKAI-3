@@ -1,0 +1,212 @@
+# Cómo hacer mods en DBZ Budokai 3 HD Collection
+
+> Actualizado: 2026-10-06 (§5 portar un personaje de Shin Budokai, §6 cámaras con el Studio).
+> Pipeline CORRECTO validado (override por entrada + mid-insert virtual).
+
+---
+
+## 1. LOS DOS TIPOS DE MOD
+
+### 1.1 Override de archivo completo (reemplaza un AFS entero)
+```
+mods/<mod>/us/data_cmn.afs        ← archivo AFS completo (293MB)
+mods/<mod>/eu/data_cmn.afs
+```
+- Usado por `og_music`.
+- El hook `AfsFindModFileOverride` lo sirve.
+- **Desventaja**: hay que reconstruir el AFS entero (build_afs.py). Ya NO es
+  necesario para swaps de modelo/textura.
+
+### 1.2 Override por entrada (reemplaza UN bin dentro del AFS) — RECOMENDADO
+```
+mods/<mod>/us/data_cmn.afs/327/geom.bin     ← formato CARPETA
+mods/<mod>/us/data_cmn.afs/327              ← formato ARCHIVO DIRECTO
+```
+- El hook `AfsFindModOverride` lo sirve.
+- **No hay que reconstruir el AFS** — solo el bin de una entrada (~100KB).
+- **Cualquier tamaño de bin**: si excede el slot, el runtime aplica el
+  **mid-insert virtual** (ver §2.4). 2+ mods simultáneos (entradas distintas).
+
+---
+
+## 2. PASOS PARA HACER UN MOD DE MODELO
+
+### Paso 0: conocer la entrada correcta
+La entrada = índice de la tabla del AFS (offset 8 del archivo, `entry_count` en +4).
+- Krillin visible = **entrada 327** (NO 326). Verificado por instrumentación.
+- El runtime loguea las lecturas: `AFS327 READ` en `logs/dbz3_*.log`.
+
+### Paso 1: extraer el bin original
+```powershell
+# 1. Localizar la entrada en el AFS (tabla en offset 8)
+# 2. Extraer los bytes comprimidos LZX
+# 3. Descomprimir con xbdecompress
+xbdecompress.exe <entrada.lzx> <entrada.bin>
+```
+
+### Paso 2: modificar el bin
+- Para verificar la estructura B3 HD usa `awo_tools/awg_to_obj_b3.py`,
+  `awo_tools/awg0_export.py` o `awo_tools/awg_cara_export.py`.
+- Para swaps nativos usa `swap_b3.py` o la pestaña Model Swap del launcher.
+
+### Paso 3: comprimir con /N:2048 (IMPORTANTE)
+```powershell
+xbcompress.exe /N:2048 <bin_plano> <bin_comprimido.lzx>
+```
+> ⚠️ NO usar `/N:32` ni `/N:64` — producen bins más grandes que el slot → crash.
+
+### Paso 4: paddear al to_read
+El guest aloca `to_read = ceil(size_tabla/0x1000)*0x1000`. El bin comprimido se
+rellena con ceros hasta ese tamaño:
+- **Si cabe** en el slot (bin ≤ to_read): pad al to_read del slot.
+- **Si es mayor** (p.ej. Goten 107006 > Krillin 106496): pad al
+  `to_read_virtual = ceil(bin/0x1000)*0x1000` (110592). El runtime lo autoriza
+  con el mid-insert virtual: la entrada crece in-place en la tabla virtual y las
+  posteriores se desplazan +delta. El guest aloca el buffer correcto y recibe el
+  bin completo sin truncar.
+
+`swap_b3.py` hace este padding automáticamente.
+
+### Paso 5: instalar
+```powershell
+# Crear la estructura de carpeta del mod
+New-Item -ItemType Directory -Path "mods/<mod>/us/data_cmn.afs/327" -Force
+Copy-Item padded.bin "mods/<mod>/us/data_cmn.afs/327/geom.bin"
+
+# Activar (eliminar .disabled si existe)
+Remove-Item "mods/<mod>/.disabled"
+```
+
+### Paso 6: verificar en logs
+```
+logs/dbz3_001.log:
+  AFS OVERRIDE HIT (folder): ...\mods\<mod>\us\data_cmn.afs\327\geom.bin
+  AFS MOD READ: bin 327 mod_off=0x0 to_read=106496 got=106496 mod_size=...
+```
+> `got=to_read` = el guest recibió el bin completo. Si `got < to_read` → falta padding.
+
+---
+
+## 2.4 🔴 MID-INSERT VIRTUAL (2026-08-18)
+
+El guest lee cada entrada del `data_cmn.afs` con un buffer de
+`to_read = ceil(size/0x1000)*0x1000` derivado de la tabla AFS. Un bin de mod
+mayor que ese to_read se truncaba al servirse por override → crash.
+
+La solución del runtime (parche en `patches/`, archivos `afs.cpp`/`afs.h`/
+`host_path_file.cpp`) presenta al guest una **tabla AFS virtual CONSISTENTE**:
+
+- `AfsGetVirtualTable()`: si un override excede el `to_read` del slot, la
+  entrada **crece in-place** (slot alineado a 0x800) y **todas las entradas
+  posteriores se desplazan** por el delta acumulado — replicando exactamente un
+  rebuild con mid-insert. Los addr virtuales son coherentes → el guest las
+  encuentra correctamente (a diferencia del intento "naive" que inflaba sizes
+  manteniendo addr: el guest recalcula offsets acumulando sizes → crash).
+- `AfsTranslateOffset()`: para las lecturas de datos, traduce virtual → físico
+  (resta el delta de la entrada) y sirve el override (bin completo) o lee del
+  archivo físico en el offset traducido.
+
+**Criterio de crecimiento**: solo crece si el override > `to_read` (lo que el
+guest ya aloca), NO si excede el slot físico. Un mod que cabe (p.ej. texturas
+de Gero, 114688 = to_read) no desplaza nada.
+
+**Resultado**: swaps nativos B3→B3 que pesan ~100KB, en **cualquier dirección**
+(el bin puede ser mayor o menor que el slot), y 2+ mods de modelo/textura
+activos simultáneamente.
+
+---
+
+## 3. TAMAÑOS DE SLOT DE ENTRADAS CLAVE
+
+| Entrada | Personaje | Slot comprimido | to_read |
+|---|---|---|---|
+| 327 | Krillin (visible) | 105296 | 106496 |
+| 328 | Krillin Buu Saga | 104404 | 106496 |
+| 329 | Krillin Namek | 101268 | 102400 |
+| 298 | Goten | 107006 | 110592 |
+| 270 | Goku | 128062 | 130048 |
+
+> Con el mid-insert virtual el bin YA NO tiene que caber en el slot de la
+> entrada destino: si lo excede, la tabla virtual hace crecer la entrada y
+> desplaza las posteriores automáticamente.
+
+---
+
+## 4. CÓMO ACTIVAR/DESACTIVAR MODS
+
+- **Activo**: carpeta `mods/<mod>/` SIN archivo `.disabled`.
+- **Desactivado**: con `.disabled`.
+- **Orden**: los mods se ordenan alfabéticamente; el primer match gana.
+- La activación real usa únicamente el marker `.disabled`; `dbz3_enabled_mods`
+  quedó obsoleto y no controla los mods actuales. El override por entrada es
+  independiente del perfil visualizado por el launcher.
+
+---
+
+## 5. PORTAR UN PERSONAJE DE SHIN BUDOKAI (de principio a fin)
+
+Fuentes: las ISOs de PSP en `ps2_games/` (Shin Budokai = `sb1`, Another Road = `sb2`) y, para
+modelos HD mejores, la carpeta de Super Dragon Ball Heroes World Mission en `modding resources/`
+(`sdbh`). Formatos y diferencias: `docs/03_formatos/SB_VS_B3_MOVESET.md`.
+
+### 5.1 Lo rápido (sin consola)
+Launcher → **Personajes nuevos** → «Importar personaje» → *Shin Budokai: Another Road* → el
+personaje → nombre → **Importar** → JUGAR. En el Mod Kit es la tarjeta «Importar personaje».
+
+Qué hace el importador (`mod center hd/importar.py importar sb2 GHF --mod … --nombre …`):
+1. **Modelos:** cada `BC<XXX>B0n.amb` → bin HD (`awo_tools/psp_amo.py`); con `sdbh`, cada
+   `bc<xxx>bNN` → bin HD con boca, 7 caras y rampas (`awo_tools/sdbh_model.py`, plantilla = el modelo
+   del donante). Van como **formas** de un traje (`modelos_por_traje`).
+2. **Moveset y cámara:** `awo_tools/sbport.py` (AP 20 → 16 B, HR 160 → 128 B, daño × 0,85, códigos
+   remapeados, almacén global por tabla, hiper / agarre / Dragon Rush / definitiva del donante).
+   Deja `moveset/anm_forma1.bin` y `moveset/camara.bin`.
+3. **Técnicas:** `awo_tools/sb_tecnicas.py` (BSP híbrido, nombres oficiales) cuando esté listo →
+   `moveset/tecnicas.bin`.
+4. **Formas:** `formas = n`, `transformacion = "donante"` (P+K+G del donante, quita la abajo+E de SB),
+   `fisica = "donante"` y una cápsula de transformación por forma con el nombre de la del donante
+   (sus barras de ki). Ver `docs/03_formatos/FORMAS_Y_KI.md`.
+5. **Voces:** las del donante hasta que el módulo de voces entienda `sb2:XXX`.
+
+Si `sbport.py` falla o no está, el personaje se importa igual con **los golpes del donante** (y
+tantas formas como tenga el donante) y el registro lo dice.
+
+### 5.2 Ajustar después (Mod Kit → Personajes)
+- **Formas, física y aspecto:** formas, ki base por forma, modelo por forma, física de pelo y
+  cinturón, transformación del donante.
+- **Cápsulas:** nombres oficiales, orden, **«Fijar ki»** de cada transformación (barras que hay que
+  tener; no se gastan).
+- **Cámaras (Studio):** las definitivas de SB no traen cámara propia: hazla con el Studio (§6).
+- **Imágenes:** icono, rótulo y retratos se generan del modelo; «Regenerar vista previa».
+
+### 5.3 A mano (consola)
+```powershell
+python awo_tools/sbport.py --lista --juego sb2                       # códigos de 3 letras
+python "mod center hd/importar.py" lista sb2                          # lo que ve el launcher
+python "mod center hd/importar.py" importar sb2 GHF --mod imp_sb2_future_gohan --nombre "Future Gohan" --mods <carpeta de mods>
+python "mod center hd/roster_build.py" construir --mods <carpeta de mods>    # o pulsar JUGAR
+```
+Para probar sin tocar tus mods, usa una carpeta aparte con `--mods` (`construir` reescribe el
+`_roster` de la carpeta que le pases).
+
+### 5.4 Qué mirar en el juego
+Golpes y daño normales; P+K+G con 3/4/5/6 barras; volver a normal con menos de 1 barra; la ficha
+de pausa («With over N Ki gauges»); especiales y definitiva; el cinturón en reposo y al andar; la
+sombra toon y el brillo HD al 0 % y al 100 %.
+
+---
+
+## 6. CÁMARAS DE TÉCNICAS (Studio)
+
+Guía para usuarios: `docs/02_mods/STUDIO_CAMARAS.md`. Formato: `docs/03_formatos/CAMARA_ACC.md`.
+
+- **Personaje del juego:** el Studio escribe `mods/studio_<personaje>/us/data_cmn.afs/<fid CAM>/geom.bin`
+  (LZX `/N:2048`, relleno a un tamaño **reservado** para poder recargar sin reiniciar) y un
+  `studio.json` con los clips editados.
+- **Personaje nuevo:** reescribe su `moveset/camara.bin` (se monta al pulsar JUGAR).
+- Respaldos en `mods/<mod>/respaldo/<fecha>/` (nunca dentro de `us/`: el runtime sirve el primer
+  fichero de la carpeta de la entrada).
+- Ciclo de prueba: guardar → Pausa → «Reelegir personajes» → lanzar la técnica. La primera vez,
+  reiniciar el juego.
+- Consola: `python "mod center hd/studio/studio_core.py" info 0` (clips y guiones de Goku),
+  `exportar-glb`, `importar-glb`, `selftest`.
+

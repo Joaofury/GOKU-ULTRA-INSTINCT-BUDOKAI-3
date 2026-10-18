@@ -1,0 +1,167 @@
+Budokai 3 Capsules ID:
+----------------------------------------------------------
+01 00: Kaio Ken - Goku - (Red)
+02 00: Super Saiyan 1 - Goku - (Red)
+03 00: Super Saiyan 2 - Goku - (Red)
+04 00: Super Saiyan 3 - Goku - (Red)
+05 00: Super Saiyan 4 - Goku - (Red)
+06 00: Kamehameha - Goku - (Red)
+07 00: Dragon Fist - Goku - (Red)
+08 00: Kamehameha x10 - Goku - (Red)
+09 00: Warp Kamehameha - Goku - (Red)
+0A 00: Spirit Bomb - Goku - (Red)
+0B 00: Super Spirit Bomb - Goku - (Red)
+0C 00: Super Dragon Fist - Goku - (Red)
+
+0D 00: Kamehameha - Kid Goku - (Red)
+0E 00: Rock-Sissors-Paper - Kid Goku - (Red)
+0F 00: Super Dragon Fist
+
+10 00: Unlock Potential
+11 00: Masenko
+
+12 00:Super Saiyan 1
+13 00:Super Saiyan 2
+14 00:Kamehameha
+15 00:Soaring Dragon Strike
+16 00:Father-Son Kamehameha
+
+17 00:Super Saiyan 1
+18 00:Super Saiyan 2
+19 00:Unlock Potential
+1a 00:Kamehameha
+1b 00:Soaring Dragon Strike
+1c 00:Super Kamehameha
+
+1d 00:Justice Punch
+1e 00:Justice Kick
+1f 00:Justice Pose
+
+20 00:Super Saiyan 1
+21 00:Kamehameha
+22 00:Charge
+
+23 00:Super Saiyan 1
+24 00:Super Saiyan 2
+25 00:Super Saiyan 4
+26 00:Galick GUN
+27 00:Final Shine Attack
+28 00:Final Impact
+29 00:Atomic Blast
+2A 00:Final Flash
+2B 00:Big Bang Attack 
+2C 00:The End Explotion
+
+2D 00:Super Saiyan 1
+2E 00:Super Saiyan 2
+2F 00:Buster Cannon
+30 00:Finish Buster
+31 00:Burnig Slash
+
+32 00:Super Saiyan 1
+33 00:
+
+60 00: is 2nd Form
+61 00: is 3rd Form
+62 00: is Final Form
+63 00: is 100% Final Form
+64 00: is Death Beam
+65 00: is Death Wave
+66 00: is Death Ball
+95 01: is the spaceship
+
+85 00: is Final Form
+86 00: Destructive Ray
+87 00: Sauzer Blade
+88 00: Supernova
+95 01: is the spaceship
+
+89 00: Riot Javelien
+8A 00: Heat Phalanx
+8B 00: Spririt of Saiyans
+
+8C 00: is legendary Super Saiyan 
+8D 00: is blaster shell
+8E 00: is gigantic press
+8F 00: is gigantic meteor
+
+
+----------------------------------------------------------
+CF 00: Breakthrough - Goku - (Red)
+D0 00: Breakthrough - Kid Goku - (Red)
+D1 00: Breakthrough - Kid Gohan - (Red)
+D2 00: Breakthrough - Teen Gohan - (Red)
+D3 00: Breakthrough - Gohan - (Red)
+D4 00: Breakthrough - Great Saiyaman - (Red)
+D5 00: Breakthrough - Goten - (Red)
+D6 00: Breakthrough - Vegeta - (Red)
+D7 00: Breakthrough - Future Trunks - (Red)
+D8 00: Breakthrough - Kid Trunks - (Red)
+D9 00: Breakthrough - Krillin - (Red)
+DA 00: Breakthrough - Pccolo - (Red)
+DB 00: Breakthrough - Ten Shin Han - (Red)
+DC 00: Breakthrough - Yamcha - (Red)
+DD 00: Breakthrough - Mr. Satan - (Red)
+DE 00: Breakthrough - Videl - (Red)
+DF 00: Breakthrough - Kaioshin - (Red)
+E0 00: Breakthrough - Uub - (Red)
+E1 00: Breakthrough - Raditz - (Red)
+E2 00: Breakthrough - Nappa - (Red)
+E3 00: Breakthrough - Ginyu - (Red)
+E4 00: Breakthrough - Recoome - (Red)
+E5 00: Breakthrough - Frieza - (Red)
+E6 00: Breakthrough - A16 - (Red)
+E7 00: Breakthrough - A17 - (Red)
+E8 00: Breakthrough - A18 - (Red)
+E9 00: Breakthrough - Dr. Gero - (Red)
+EA 00: Breakthrough - Cell - (Red)
+EB 00: Breakthrough - Majin Buu - (Red)
+EC 00: Breakthrough - Super Buu - (Red)
+ED 00: Breakthrough - Kid Buu - (Red)
+EE 00: Breakthrough - Dabura - (Red)
+EF 00: Breakthrough - Cooler - (Red)
+F0 00: Breakthrough - Bardock - (Red)
+F1 00: Breakthrough - Broly - (Red)
+F2 00: Breakthrough - Super Yi-Shing-Long - (Red)
+F3 00: Breakthrough - Saibaman - (Red)
+F4 00: Breakthrough - Cell Jr. - (Red)
+F5 00: Breakthrough - Bulma - (Red)
+----------------------------------------------------------
+C9 01: Goku - (Grey)
+CA 01: Kid Goku - (Grey)
+CB 01: Kid Gohan - (Grey)
+CC 01: Teen Gohan - (Grey)
+CD 01: Gohan - (Grey)
+CE 01: Great Saiyaman - (Grey)
+CF 01: Goten - (Grey)
+D0 01: Vegeta - (Grey) 
+D1 01: Trunks - (Grey)
+D2 01: Kid Trunks - (Grey)
+D3 01: Krillin - (Grey)  
+D5 01: Tenshinhan - (Grey)
+D6 01: Yamcha - (Grey)
+D7 01: Mr Satan - (Grey)
+D8 01: Videl - (Grey)
+D9 01: Kaioshin - (Grey)
+DA 01: Uub - (Grey)
+DB 01: Raditz - (Grey)
+DC 01: Nappa - (Grey)
+DD 01: Ginyu - (Grey)
+DE 01: Recoome - (Grey)
+DF 01: Frieza - (Grey)
+E0 01: Dr. Gero - (Grey)
+E1 01: A16 - (Grey)
+E2 01: A17 - (Grey)
+E3 01: A18 - (Grey)
+E4 01: Cell - (Grey)
+E5 01: Majin Buu - (Grey)
+E6 01: Super Buu - (Grey)
+E7 01: Kid Buu - (Grey)
+E8 01: Dabura Buu - (Grey)
+E9 01: Cooler - (Grey)
+EA 01: Bardock - (Grey)
+EB 01: Broly - (Grey)
+E9 01: Super Yi-Shing-Long - (Grey)
+ED 01: Saibaman - (Grey)
+EE 01: Cell Jr. - (Grey)
+EF 01: Bulma - (Grey)

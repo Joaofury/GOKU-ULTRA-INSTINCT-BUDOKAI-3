@@ -1,0 +1,60 @@
+GOKU ULTRA INSTINCT (SDBH) + KIT DE MODDING
+PARA DRAGON BALL Z BUDOKAI 3 HD RECOMPILED
+=====================================================================
+
+Personagem novo: Goku Instinto Superior (modelo do Super Dragon Ball Heroes), com a
+ult "Strike of Fury" (capsula definitiva), os efeitos visuais do Heroes e os SONS do
+Heroes (fala da ult, explosao de ki, avanco, soco, gritos e vozes de batalha).
+
+Este zip tambem traz o KIT DE MODDING do launcher (com o Python pronto). Com o kit,
+o launcher junta sozinho TODOS os personagens novos da pasta mods: ativar/desativar
+no launcher funciona e personagens de outros mods aparecem junto com o Goku UI.
+
+REQUISITOS
+- Dragon Ball Z Budokai 3 HD Recompiled (launcher 1.4.4.5 ou mais novo) ja
+  funcionando, com os arquivos do jogo da SUA copia (versao USA).
+- O zip NAO traz arquivos do jogo.
+- NAO precisa instalar Python nem rodar nenhum .bat: o Python vem pronto na pasta
+  "python".
+
+COMO INSTALAR
+1. Feche o jogo.
+2. Extraia TUDO do zip DIRETO na pasta do jogo (onde fica o dbz3.exe) e aceite
+   juntar/substituir. Tem que ficar assim:
+       <pasta do jogo>\python\python.exe
+       <pasta do jogo>\mod center hd\roster_build.py
+       <pasta do jogo>\mods\gokuui_sdbh\personaje.toml
+3. Abra o launcher e aperte JOGAR. Na primeira vez, e sempre que voce ativar ou
+   desativar um personagem, o launcher monta os personagens antes de abrir o jogo
+   (pode demorar um pouco). O Goku UI aparece numa casa nova da roda do select.
+
+OUTROS PERSONAGENS NOVOS
+- Coloque as pastas deles em mods (ex.: mods\cut_zarbon) e aperte JOGAR: o launcher
+  monta todos juntos. Para tirar um, desative na aba de mods/personagens novos.
+- O Goku UI ganha os sons e a aura do Heroes em toda montagem (o roster_build.py
+  deste kit tem um ajuste que faz isso usando mods\gokuui_sdbh\extras).
+
+ATENCAO
+- A aura de batalha do Heroes so aparece no PC onde o mod foi feito (ela depende de
+  um programa que roda junto com o jogo). Aqui ele usa a aura do Goku original.
+- O mods\_roster que vem no zip e so um ponto de partida (ja com o Goku UI); o
+  launcher refaz essa pasta sozinho.
+
+COMO USAR A ULT
+- Equipe a capsula "Strike of Fury" no Goku UI (ela ja vem na lista padrao).
+- Na luta, entre no modo hiper e use a definitiva (P + K + G + E).
+
+PROBLEMAS
+- Erro "No module named ..." ou "falta una dependencia de Python": confira se as
+  pastas python e mod center hd ficaram direto na pasta do jogo (sem uma pasta a
+  mais no meio) e se mod center hd\capsulas.py existe.
+- O personagem nao aparece: confira se existe mods\gokuui_sdbh\personaje.toml.
+
+COMO REMOVER
+- So o Goku UI: desative no launcher ou apague mods\gokuui_sdbh.
+- O kit: apague a pasta python e o arquivo mod center hd\roster_build.py (sem eles
+  o launcher volta a usar so o _roster pronto, sem montar nada).
+
+O kit de modding e do autor do launcher (copia pessoal com o ajuste dos sons).
+Uso pessoal, apenas para teste. Contem conteudo derivado de Dragon Ball Heroes e de
+Budokai 3; nao distribua publicamente.

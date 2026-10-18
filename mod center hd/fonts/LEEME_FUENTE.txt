@@ -1,0 +1,3 @@
+Roboto Bold (Google), licencia Apache 2.0: https://www.apache.org/licenses/LICENSE-2.0
+Se incluye para que el Kit nunca falle si el PC no tiene las fuentes de Windows/Office
+que usa por defecto (Arial Rounded, Comic Sans, Arial).
