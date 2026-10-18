@@ -21,7 +21,7 @@ _________________________________________________________
 
 
 
-
+____________________________________
 "Lógica e código deste mod desenvolvidos com a assistência do Claude AI."
 _____________________________________
 "The logic and code for this mod were developed with the assistance of Claude AI."
