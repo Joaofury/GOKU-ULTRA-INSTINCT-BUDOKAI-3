@@ -6,6 +6,8 @@ COMO INSTALAR/ HOW TO INSTALL
        <pasta do jogo>\mods\_roster\roster.toml
 3. Abra o jogo pelo launcher. O Goku UI aparece numa casa nova da roda do select,
    ja com os sons do Heroes. Nao precisa rodar nada.
+
+   (nao é obrigatorio jogar a pasta Python, porem sem ela o Goku nao tera a voz alterada e sem voz no Strike of Fury)
 _________________________________________________________
 1. Close the game.
 2. Extract the "mods" folder from the zip file DIRECTLY into the game folder (where dbz3.exe is located) and
@@ -15,7 +17,7 @@ _________________________________________________________
 3. Launch the game. Goku UI will appear in a new slot on the character selection wheel,
    along with the characters from *Heroes*. No additional steps are required.
 
-
+(It is not mandatory to include the Python folder; however, without it, Goku’s voice will not be changed, and he will have no voice in Strike of Fury.)
 
 
 
